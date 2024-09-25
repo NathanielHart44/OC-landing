@@ -9,7 +9,7 @@ export default function Home() {
 
         <Hero />
 
-        <Countdown targetDate={"2024-10-24T12:20:59"} />
+        <Countdown targetDate={"2024-11-11T12:00:00"} />
 
       </main>
       <footer className="row-start-3 flex gap-12 flex-wrap items-center justify-center">
