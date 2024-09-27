@@ -7,9 +7,26 @@ export default function Home() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-center justify-center">
 
-        <Hero />
-
         <Countdown targetDate={"2024-11-11T12:00:00"} />
+
+        <Hero 
+          title="Revolutionizing the IO Genre" 
+          paragraphs={[
+            "After countless hours of playing IO games, we grew frustrated with the lack of medium- to long-term progression. It felt like the fun ended after just a few rounds!",
+            "So, we set out to maintain the simplicity of IO games while introducing deeper peer-to-peer (P2P) skill expression, long-term progression, and more! Thus, Open Colosseum was born."
+          ]}
+        />
+
+        <Hero 
+          title="The First Infinite Battle Royale" 
+          paragraphs={[
+            "Open Colosseum combines the accessibility of games like Slither and Agar.io with the deeper mechanics of MOBAs like Brawl Stars and League of Legends.",
+            "It is the world's first Infinite Battle Royale, where as you survive longer and level up, you grow stronger, bigger, and unlock new abilities!"
+          ]}
+          buttonText="Join the Discord"
+          imageUrl="https://nfty-temp.s3.us-west-1.amazonaws.com/IMG_0115.jpg"
+          imageAlt="Hero image"
+        />
 
       </main>
       <footer className="row-start-3 flex gap-12 flex-wrap items-center justify-center">
