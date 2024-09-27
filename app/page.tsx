@@ -1,11 +1,14 @@
 import Countdown from "@/components/Countdown";
 import Hero from "@/components/Hero";
 import Image from "next/image";
+import { LandingTestimonialGrid } from '@/components/landing/testimonial/LandingTestimonialGrid';
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-center justify-center">
+
+        <h1 className="text-5xl font-bold">Open Colosseum</h1>
 
         <Countdown targetDate={"2024-11-11T12:00:00"} />
 
@@ -26,6 +29,12 @@ export default function Home() {
           buttonText="Join the Discord"
           imageUrl="https://nfty-temp.s3.us-west-1.amazonaws.com/IMG_0115.jpg"
           imageAlt="Hero image"
+        />
+
+        <LandingTestimonialGrid
+          title="What People Are Saying"
+          description="Here's what some of our early testers have to say about Open Colosseum."
+          testimonialItems={testimonialItems}
         />
 
       </main>
@@ -76,3 +85,45 @@ export default function Home() {
     </div>
   );
 }
+
+// ------------------------------
+
+const testimonialItems = [
+  {
+    name: 'Mathew',
+    text: 'After using this, I cannot imagine going back to the old way of doing things.',
+    handle: '@heymatt_oo',
+    imageSrc: 'https://picsum.photos/100/100.webp?random=2',
+  },
+  {
+    name: 'Joshua',
+    text: 'Perfect for my use case',
+    handle: '@joshua',
+    imageSrc: 'https://picsum.photos/100/100.webp?random=3',
+  },
+  {
+    name: 'Parl Coppa',
+    text: 'This is the best thing since sliced bread. I cannot believe I did not think of it myself.',
+    handle: '@coppalipse',
+    imageSrc: 'https://picsum.photos/100/100.webp?random=1',
+    featured: true, // Feature this testimonial
+  },
+  {
+    name: 'Mandy',
+    text: 'Excellent product!',
+    handle: '@mandy',
+    imageSrc: 'https://picsum.photos/100/100.webp?random=4',
+  },
+  {
+    name: 'Alex',
+    text: 'Can easily recommend!',
+    handle: '@alex',
+    imageSrc: 'https://picsum.photos/100/100.webp?random=5',
+  },
+  {
+    name: 'Sam',
+    text: 'I am very happy with the results.',
+    handle: '@sama',
+    imageSrc: 'https://picsum.photos/100/100.webp?random=6',
+  },
+];
